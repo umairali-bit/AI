@@ -1,0 +1,6 @@
+distributed	1
+fun	2
+hadoop	2
+is	3
+mapreduce	1
+powerful	1

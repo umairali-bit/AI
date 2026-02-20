@@ -1,0 +1,19 @@
+How to run MyWordCount (Hadoop WordCount)
+
+1) Compile (Java 11 target):
+   javac --release 11 -classpath "$(hadoop classpath)" -d . MyWordCount.java
+
+2) Create jar:
+   jar -cvf MyWordCount.jar *.class
+
+3) Put input into HDFS:
+   hdfs dfs -mkdir -p /input
+   hdfs dfs -put -f Input.txt /input/
+
+4) Run job (delete output folder if it already exists):
+   hdfs dfs -rm -r -f /output
+   hadoop jar MyWordCount.jar MyWordCount /input/Input.txt /output
+
+5) View and save output:
+   hdfs dfs -cat /output/part-r-00000
+   hdfs dfs -cat /output/part-r-00000 > Output.txt
