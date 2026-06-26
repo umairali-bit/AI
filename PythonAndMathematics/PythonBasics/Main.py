@@ -72,5 +72,69 @@ some_user -= 2
 some_user *= 2
 print(some_user)
 
+# Strings
+print(type('Hello there!'))
+userName = 'user123'
+password = 'pass'
+long_string = '''
+
+WOW
+
+O O
+___
+
+'''
+
+print(long_string)
+first_name = 'Walter'
+last_name = 'White'
+full_name = first_name + ' ' + last_name
+print(full_name)
+
+# Type conversion
+print(type(int(str(100))))
+
+#Escape Sequence
+weather = '\tIt\'s \"kind of\" a sunny day \n hope you have a good day'
+print(weather)
+
+#formatted strings
+
+name = "Hank"
+age = 50
+print(f'Hi {name}. You are {age} years old')
+print('Hi {1}. You are {0} years old'.format(name, age))
+print('Hi {new_name}. You are {age} years old'.format(new_name = 'gus' , age = 40))
+
+#String indexes
+selfish = '01234567'
+#[start:stop:stepOver]
+print(selfish[0])
+print(selfish[0:4])
+print(selfish[:5])
+print(selfish[1:])
+print(selfish[:])
+print(selfish[::2])
+print(selfish[1::2])
+print(selfish[::-1])
+print(selfish[-1])
+
+
+#Built-in functions and methods in Python
+greet = 'helloooooooo'
+print(len(greet))
+print(greet[0])
+print(greet[0:len(greet)])
+print(greet[1:len(greet)])
+quote = 'to be or not to be'
+print(quote.upper())
+print(quote.capitalize())
+print(quote.find('be'))
+print(quote.replace('be', 'me'))
+
+
+
+
+
 
 
