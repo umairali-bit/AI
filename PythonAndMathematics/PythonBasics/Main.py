@@ -1,3 +1,4 @@
+from datetime import date
 
 #name = input('What is your name? ')
 #print('Hello ' + name)
@@ -131,6 +132,65 @@ print(quote.upper())
 print(quote.capitalize())
 print(quote.find('be'))
 print(quote.replace('be', 'me'))
+
+#booleans
+name = 'Umair'
+is_cool = False
+is_cool = True
+
+print(bool(1)) #True
+print(bool(0)) #False
+
+#exercise
+# birth_year = int(input('What year were you born?'))
+#
+# age = date.today().year - birth_year
+#
+# print(f'Your age is {age}' )
+
+#Password checker exercise
+# user_name = input('What is your user name?')
+# password = input('What is your password?')
+#
+# print(f"Your password {'*' * len(password)} is {len(password)} characters long")
+
+#list - ordered sequence of objects
+li = [1,2,3,4,5,6]
+li2 = ['a','b','c','d','e','f']
+li3 = [1,2,3,'a','b','c', True]
+
+amazon_cart = ['notebooks','sunglasses']
+print(amazon_cart[1])
+
+#list slicing
+
+amazon_cart = ['notebooks',
+               'sunglasses',
+               'toys',
+               'grapes']
+
+print(amazon_cart)
+print(amazon_cart[0:2]) #start is included but end is included
+
+#lists are mutable
+amazon_cart[0] = 'laptop'
+new_cart = amazon_cart[:]
+new_cart[0] = 'gum'
+print(new_cart)
+print(amazon_cart)
+
+
+#Matrix is a way to describe multidimensional lists
+#2-dimensional array
+matrix = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+
+print(matrix[0][1]) #2
+
+
 
 
 
