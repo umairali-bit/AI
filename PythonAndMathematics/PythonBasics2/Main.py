@@ -1,4 +1,5 @@
 #Conditional Logic
+from email.mime import image
 from operator import truediv
 
 is_old = True
@@ -60,3 +61,173 @@ print( 0 <= 0)
 print ( 0 != 0)
 print(not(True))
 
+#Conditional logic exercise
+is_Magician = False
+is_Expert = True
+
+# check if master AND magician, "You are a master magician"
+# check if magician but not the expert. "You are getting there!"
+# if not are not magician "You need magical powers"
+
+if is_Magician and is_Expert:
+    print("You are a master magician!")
+elif is_Magician and not is_Expert:
+    print("You are getting there!")
+elif not is_Magician:
+    print("You need magic powers")
+
+#is vs ==
+# == checks whether two objects have equal values.
+# is checks whether two variables refer to the exact same object in memory.
+print(True == 1)
+print('1' == 1)
+print([] == [])
+print([1, 2, 3] == [1, 2, 3])
+
+print(True is 1)
+print('1' is 1)
+print([] is [])
+print([1, 2, 3] is [1, 2, 3])
+
+# for loop
+for items in "I am not in danger, Skyler. I am the danger.":
+    print(items)
+
+for item in [1, 2, 3]:
+    print(item)
+    print(item)
+    print(item)
+
+for item in [1, 2, 3]:
+    for x in ['a', 'b', 'c']:
+        print(item, x)
+
+
+# iterables
+
+user = {
+    'name' : 'Tuco Salamanca',
+    'age' : 45,
+    'can_Cook' : False
+}
+
+for x in user.items():
+    print(x)
+
+for x in user.keys():
+    print(x)
+
+for x in user.values():
+    print(x)
+
+for key, value in user.items():
+    print(key, value)
+
+
+#looping exercise
+my_list = [1,2,3,4,5,6,7,8,9,10]
+result = 0
+
+for counter in my_list:
+    result += counter
+print(result)
+
+#range
+for number in range(1, 11):
+    print(number)
+
+for _ in range(1, 11):
+    print(_)
+
+for _ in range(1, 11):
+    print(_)
+
+for _ in range(0, 10, 2):
+    print(_)
+
+for _ in range(10, 0, -1):
+    print(_)
+
+for number in range(1, 11):
+    print('email list')
+
+for _ in range(2):
+    print(list(range(10)))
+
+
+# enumerate
+
+for (item, items) in enumerate([1, 2, 3]):
+    print(item, items)
+
+for i, char in enumerate('Hellooooooo'):
+    print(i, char)
+
+
+for i, char in enumerate(list(range(100))):
+    if char == 50:
+        print (f'index of 50: {i}')
+
+
+#While loop
+
+i = 0
+while i < 50:
+
+    print(i)
+    i += 1
+
+else:
+    print("done with all the work")
+
+
+my_list = [1,2,3,4,5,6,7,8,9,10]
+for item in my_list:
+    print(item)
+
+i=0
+while i < len(my_list):
+    print(my_list[i])
+    i += 1
+
+# while True:
+#     # resp = input('say something:')
+#
+#     if resp == 'bye':
+#         break
+#
+
+
+#image
+
+picture = [
+  [0,0,0,1,0,0,0],
+  [0,0,1,1,1,0,0],
+  [0,1,1,1,1,1,0],
+  [1,1,1,1,1,1,1],
+  [0,0,0,1,0,0,0],
+  [0,0,0,1,0,0,0]
+]
+
+
+for row in picture:
+    for pixel in row:
+        if pixel == 1:
+            print('*', end =' ')
+        else:
+            print(' ', end =' ')
+
+    print(' ')
+
+
+# find duplicates
+
+some_list = ['a','b','b','c','d','e','f']
+duplicate = []
+
+for item in some_list:
+    if some_list.count(item) > 1:
+        if item not in duplicate:
+            duplicate.append(item)
+
+print(duplicate)
