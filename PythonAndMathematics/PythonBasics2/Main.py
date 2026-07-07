@@ -231,3 +231,120 @@ for item in some_list:
             duplicate.append(item)
 
 print(duplicate)
+
+#Functions
+
+def say_hello():
+    print('hellllooooooo')
+
+say_hello()
+
+#Parameters and Arguments
+#parameters
+def say_hello(name, emoji):
+    print(f'hellooooo {name} {emoji}')
+
+#arguments, positional arguments
+say_hello('Umair', '😊')
+
+#key_word argument
+say_hello(name='Bibi', emoji='❤️')
+
+#default parameters
+def say_hello(name='Walter White', emoji='😈'):
+    print(f'hello {name} {emoji}')
+
+say_hello()
+
+#return statement
+def sum(num1, num2):
+    print('hiiii')
+    return num1 + num2
+
+total = sum(1,2)
+print(sum(10, total))
+
+def sum(num1, num2):
+    def another_func(n1,n2):
+        return n1 + n2
+    return another_func(num1, num2)
+
+total = sum(1,2)
+print(total)
+
+# func exercise
+def checkDriverAge(age=0):
+    if int(age) < 18:
+        print("Sorry, you are too young to drive this car. Powering off")
+    elif int(age) > 18:
+        print("Powering On. Enjoy the ride!");
+    elif int(age) == 18:
+        print("Congratulations on your first year of driving. Enjoy the ride!")
+
+checkDriverAge()
+checkDriverAge(52)
+checkDriverAge(12)
+checkDriverAge(18)
+
+#DocStrings
+def test(a):
+    '''
+    :param a:
+    :return:
+    '''
+
+    print(a)
+
+help(test)
+print(test.__doc__)
+
+#clean_code
+def is_even(num):
+    return num % 2 == 0
+
+print(is_even(6))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
