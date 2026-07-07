@@ -257,20 +257,20 @@ def say_hello(name='Walter White', emoji='😈'):
 say_hello()
 
 #return statement
-def sum(num1, num2):
-    print('hiiii')
-    return num1 + num2
+# def sum(num1, num2):
+#     print('hiiii')
+#     return num1 + num2
+#
+# total = sum(1,2)
+# print(sum(10, total))
 
-total = sum(1,2)
-print(sum(10, total))
+# # def sum(num1, num2):
+#     def another_func(n1,n2):
+#         return n1 + n2
+#     return another_func(num1, num2)
 
-def sum(num1, num2):
-    def another_func(n1,n2):
-        return n1 + n2
-    return another_func(num1, num2)
-
-total = sum(1,2)
-print(total)
+# total = sum(1,2)
+# print(total)
 
 # func exercise
 def checkDriverAge(age=0):
@@ -303,6 +303,53 @@ def is_even(num):
     return num % 2 == 0
 
 print(is_even(6))
+
+# *args **kwargs
+
+def super_fuc(*args, **kwargs):
+    total = 0
+    for items in kwargs.values():
+        total += items
+    return sum(args) + total
+
+print(super_fuc(1,2,3,4,5, num1=5, num2=10))
+#Rule: order -> params, *args, default parameters, **kwargs
+
+#exercise - find the highest even number
+def highest_even(li):
+
+    evens = []
+
+    for item in li:
+        if item % 2 == 0:
+            evens.append(item)
+    # return max(evens) - python built in max function
+
+
+   # manually going through evens
+    highest = evens[0]
+    for item in evens:
+        if item > highest:
+            highest = item
+
+    return highest
+
+
+print(highest_even([10,2,3,4,5,6,7,8,9,20]))
+
+#walrus operator
+
+a = 'helllooooooooooo'
+if (n:= len(a)) > 10:
+    print(f'too long to print {n}')
+
+while ((n:= len(a)) > 1):
+
+    print(n)
+
+    a = a[:-1]
+print(a)
+
 
 
 
