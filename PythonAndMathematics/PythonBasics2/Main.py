@@ -350,9 +350,49 @@ while ((n:= len(a)) > 1):
     a = a[:-1]
 print(a)
 
+# scope rules
+#1 - start with local
+a = 1
 
+def confusion():
+    a = 5
+    return a
 
+print(a)
+print(confusion())
 
+#2 - check if parent local?
+
+a = 1
+
+def parent():
+    a = 10
+    def confusions():
+        return a
+    return confusions()
+
+print(parent())
+
+#3 check global
+a = 1
+
+def parent():
+    def confusions():
+        return a
+    return confusions()
+
+print(parent())
+
+#4 built in python functions
+
+a = 1
+
+def parent():
+    def confusions():
+        return sum
+    return confusions()
+
+print(parent())
 
 
 
