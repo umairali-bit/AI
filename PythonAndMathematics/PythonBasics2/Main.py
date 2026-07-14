@@ -394,6 +394,43 @@ def parent():
 
 print(parent())
 
+#Scope
+
+def confusion(b):
+    print(b)
+
+confusion(300)
+
+#global keyword
+
+total = 0
+def count():
+    global total
+    total += 1
+
+    return total
+count()
+count()
+print(count()) #count = 3
+
+#nonlocal keyword
+
+def outer():
+    x = 'local'
+
+    def inner():
+        # nonlocal x
+        x = 'nonlocal'
+        print('inner :', x)
+
+    inner()
+    print('outer :', x)
+
+outer()
+
+
+
+
 
 
 
