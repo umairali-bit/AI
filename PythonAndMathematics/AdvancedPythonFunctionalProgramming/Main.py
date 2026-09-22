@@ -77,3 +77,41 @@ print(list(map(lambda item: item **2, lambda_list)))
 a =[(0,2),(4,3),(10,-1),(9,9)]
 a.sort(key= lambda item: item[1])
 print(a)
+
+#comprehension
+my_conventional_list = []
+
+for char in 'hello':
+    my_conventional_list.append(char)
+
+print(my_conventional_list)
+
+my_comprehension_list = [char for char in 'hello']
+print(my_comprehension_list)
+
+my_comprehension_list2 = [num for num in range(0,100)]
+print(my_comprehension_list2)
+
+my_comprehension_list3 = [num*2 for num in range(0,100)]
+print(my_comprehension_list3)
+
+my_comprehension_list4 = [num*2 for num in range(0,100) if num % 2 == 0]
+print(my_comprehension_list4)
+
+#dictionary
+simple_dict = {
+    'a' :  1,
+    'b' : 2
+}
+
+my_dict = {key:value**2 for key,value in simple_dict.items()}
+print(my_dict)
+
+#exercise
+some_list = ['a','b','c','d','e','b', 'd']
+
+duplicates = set([x for x in some_list if some_list.count(x) > 1])
+print(duplicates)
+
+
+
