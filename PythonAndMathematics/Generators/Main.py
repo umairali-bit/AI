@@ -1,4 +1,6 @@
 #Generators
+import tempfile
+
 
 def my_list(num):
     result = []
@@ -42,3 +44,34 @@ class MyClass:
 gen = MyClass(100, 200)
 for i in gen:
     print(i)
+
+#fibonacci number with range
+
+def fib(num):
+    a = 0
+    b = 1
+    for i in range(num):
+        yield a
+        temp = a
+        a = b
+        b = temp + b
+
+for x in fib(20):
+    print(x)
+
+
+#fibonacci number with list
+
+def fibList(number):
+    a = 0
+    b = 1
+    result = []
+    for i in range(number):
+        result.append(a)
+        temp = a
+        a = b
+        b = temp + b
+    return result
+
+for y in fibList(20):
+    print(y)
