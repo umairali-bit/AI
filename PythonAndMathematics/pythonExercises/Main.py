@@ -24,3 +24,31 @@ def factorial(n):
 gen = factorial(5)
 
 print(next(gen))
+
+# With a given integral number n, write a program to generate a dictionary that contains (i, i x i)
+# such that is an integral number between 1 and n (both included). and then the program should print the
+# dictionary.Suppose the following input is supplied to the program: 8
+# {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
+
+def integralNum(n):
+    result = dict(
+        map(lambda x: (x, x*x), range(1, n + 1)))
+    print(result)
+
+integralNum(5)
+
+def forLoop(n):
+    ans = {}
+    for i in range(1, n + 1):
+        ans[i] = i*i
+    print(ans)
+
+forLoop(5)
+
+def listInt(n):
+    ans = []
+    for i in range(1, n + 1):
+        ans.append(i)
+        ans.append(i*i)
+    print(ans)
+listInt(5)
